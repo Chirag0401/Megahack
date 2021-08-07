@@ -1,0 +1,129 @@
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  color: #444444;
+  background: #12c2e9;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #f64f59, #c471ed, #12c2e9);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #f64f59, #c471ed, #12c2e9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+a {
+  color: #e43c5c;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #ea6981;
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Nunito", sans-serif;
+}
+
+
+/*Back button*/
+.bk-btn {
+  height: 52px;
+  width: 52px;
+  background-color: #ddd6f3;
+  border-radius: 50%;
+  transition: all 0.5s ease;
+}
+.bk-btn .bk-btn-triangle {
+  position: relative;
+  top: 13px;
+  left: 10.4px;
+  width: 0;
+  height: 0;
+  border-top: 13px solid transparent;
+  border-bottom: 13px solid transparent;
+  border-right: 13px solid white;
+  
+}
+.bk-btn .bk-btn-bar {
+  position: relative;
+  background-color: white;
+  height: 7.8px;
+  width: 13px;
+  top: -3.64px;
+  left: 22.88px;
+}
+
+.bk-btn:hover {
+  background-color: white;
+}
+
+.bk-btn:hover > .bk-btn-bar {
+  background-color: #ddd6f3;
+}
+.bk-btn:hover > .bk-btn-triangle {
+  border-right: 13px solid #ddd6f3;
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translate3d(-100%, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translate3d(100%, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@media (max-width:1100px){
+  .glitch{
+    text-align: center;
+    font-size:3em;
+  }
+}
+
+@media (max-width:600px){
+  .glitch{
+    text-align: center;
+    font-size:2em;
+  }
+}
+

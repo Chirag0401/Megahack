@@ -1,0 +1,102 @@
+{% load static %}
+{% load crispy_forms_tags %}
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+        <!-- Favicons -->
+  <link href="{% static 'img/favicon.ico' %}" rel="icon" />
+
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,400,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet" />
+
+  <!-- Vendor CSS Files -->
+  <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet" />
+  <link href="{% static 'vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet" />
+  <link href="{% static 'vendor/boxicons/css/boxicons.min.css' %}" rel="stylesheet" />
+  <link href="{% static 'vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet" />
+  <link href="{% static 'vendor/remixicon/remixicon.css' %}" rel="stylesheet" />
+  <link href="{% static 'vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet" />
+
+  <!-- Template Main CSS File -->
+  <link href="{% static 'css/validate.css' %}" rel="stylesheet" />
+  <!-- <link href="{% static 'css/preload.css' %}" rel="stylesheet" /> -->
+    </head>
+    <body>
+
+          <!-- <div class="preload">
+            <img  src="{% static 'img/mask1.jfif' %}" alt="mask" style="max-width: 100%;max-height: 50%;padding-bottom: 100px;">
+            <h1 class="glitch" data-text="LOADING...">LOADING...</h1>
+          </div>  -->
+
+          <div class="bk-btn" onclick="history.back()">
+            <div class="bk-btn-triangle"></div>
+            <div class="bk-btn-bar"></div>
+          </div>
+          <div class="container" style="text-align: center;">
+            <a href="#" class="scrollto"><img src="{% static 'img/Landscape megahack1.png' %}" alt="" class="img-fluid" title="" style="height:100px; width:350px;"></a>
+          </div>
+<style>
+    .container{
+        text-align: center;
+        margin-top: 30px;
+        opacity: 0.9;
+    }
+    .button{
+        border-radius: 10px;
+        color: blue;
+    }
+</style>
+        <div class="container py-5">
+            <div class="card" style="padding-top: 50px; padding-bottom: 50px;">
+       <div id="ele">
+        Enter last three digits of your certificate
+
+       <form>
+       <p id="ver"></p>
+    <div id="abc"></div>   
+    <input type="number" id="sum"  value="">
+    <input type="button" value="Validate" onclick=check()>
+    <div id="button"></div>
+       </form>
+       </div>
+    </div>
+    </div>
+        <script>
+        var alpha = new Array('001', '002', '003', '004', '005', '006', '007', '008', '009', '010', '011', '012', '013', '014', '015', '016', '017', '018', '019', '020', '021', '022', '023', '024', '025', '026', '027', '028', '029', '030', '031', '032', '033', '034', '035', '036', '037', '038', '039', '040', '041', '042', '043', '044', '045', '046', '047', '048', '049', '050', '051', '052', '053', '054', '055', '056', '057', '058', '059', '060', '061', '062', 
+'063', '064', '065', '066', '067', '068', '069', '070', '071', '072', '073', '074', '075', '076', '077', '078', '079', '080', '081', '082', '083', '084', '085', '086', '087', '088', '089', '090', '091', '092', '093', '094', '095', '096', '097', '098', '099', '100', '101', '102', '103', '104', '105', '106', '107', '108', '109', '110', '111', '112', '113', '114', '115', '116', '117', '118', '119', '120', '121', '122', '123', '124', '125', '126', '127', '128', '129', '130', '131', '132', '133', '134', '135', '136', '137', '138', '139', '140', '141', '142', '143', '144', '145', '146', '147', '148', '149','150');
+       
+        function check() {
+            var a,b;
+            var usum =document.getElementById("sum").value;
+            for(i=0;i<=150;i++){
+                if (usum==alpha[i]){
+            document.getElementById("ele").innerHTML ="<p style='color:green;'><i>This certificate is valid and verified by MegaHack 2.0</i></p><br>";
+            } else {
+            document.getElementById("button").innerHTML ="<i style='color:red;'>This certificate is invalid</i>";
+            }
+            }
+
+
+
+            
+        }
+        </script>
+        <div class="conatiner" style="text-align: center;">
+          <div class="copyright">
+            &copy; Copyright <strong>MegaHack 2.0</strong>. All Rights Reserved
+          </div>
+          <div class="credits">
+            Designed with ❤️ by Web Development Team
+          </div>
+        </div>
+    </body>
+</html>
